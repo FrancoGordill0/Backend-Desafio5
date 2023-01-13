@@ -1,7 +1,10 @@
 const socket = io();
 
+let btn = document.getElementById('btn')
 
-const productosHome = document.getElementById('productosHome')
+
+
+
 
 
 

@@ -5,6 +5,7 @@ import viewsRouter from "./routes/views.router.js"
 import productRouter from "./routes/product.router.js";
 import cartRouter from "./routes/cart.router.js";
 
+
       //Initializations
 const app = express();
 
@@ -32,31 +33,4 @@ socketServer.on("connection", (socket) => {
 });
 
 
-/* app.get ("/", (req, res) => {
-  let products = [
-    {
-      "id": 1,
-      "title": "Producto 1",
-      "description": "Este es un producto 1",
-      "code": "abc123",
-      "price": 150,
-      "stock": 25,
-      "category": "producto",
-      "thumbnail": "Sin imagen"
-    },
-    {
-      "id": 2,
-      "title": "Producto 2",
-      "description": "Este es un producto 2",
-      "code": "123edf",
-      "price": 200,
-      "stock": 11,
-      "category": "producto",
-      "thumbnail": "Sin imagen 2"
-    }
-  ]
 
-  res.render("home", {
-    products
-  });
-}) */

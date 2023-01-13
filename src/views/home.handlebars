@@ -1,45 +1,9 @@
-{{#> body }}
+{{#>body }}
     <h1>Vista de Productos</h1>
     {{#each products}}
-        <div>
-            <p>{{this.title}}</p>
-            <p>{{this.price}}</p>
+        <div class="container">
+            <p>Nombre: {{this.title}}</p>
+            <p>Precio: {{this.price}}</p>
         </div>
     {{/each}}
 {{/body}}
-
- 
-{{!-- {{#> body }}
-  <h1>Vista de Productos</h1>
-
-  {{#if newProduct}}
-  <div class="table-responsive">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>NOMBRE</th>
-          <th>PRECIO</th>
-          <th>FOTO</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each newProduct}}
-        <tr>
-          <td>{{{title}}}</td>
-          <td>{{{price}}}</td>
-          <td>
-            <img
-              src="{{{thumbnail}}}"
-              alt="{{{title}}}"
-              width="100px"
-            />
-          </td>
-        </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  </div>
-  {{else}}
-    <div class="alert alert-danger">No hay productos</div>
-  {{/if}}       
-{{/body}} --}}
