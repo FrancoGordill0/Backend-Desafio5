@@ -1,46 +1,38 @@
-{{#> body }}
+{{#>body }}
   <h1>Crear Producto</h1>
     {{#each products}}
         <div class="container">
             <p>Nombre: {{this.title}}</p>
             <p>Precio: {{this.price}}</p>
+            <p>Id: {{this.id}}</p>
         </div>
     {{/each}}
 
     <div class="container">
-        <form action="/realtimeproducts" method="POST">
-            <div class="mb-3">
+
+        <form action="" method="POST">
+
+            <div>
                 <label for="title" class="form-label">Nombre</label>
-                <input
-                    type="text"
-                    id="title"
-                    name="title"
-                    class="form-control"
-                    value="{{title}}"
-                />
-                </div>
-                <div class="mb-3">
-                <label for="price" class="form-label">Precio</label>
-                <input
-                    type="text"
-                    id="price"
-                    name="price"
-                    class="form-control"
-                    value="{{price}}"
-                />
-                </div>
-                <div class="mb-3">
-                <label for="category" class="form-label">Categoria</label>
-                <input
-                    type="text"
-                    id="category"
-                    name="category"
-                    class="form-control"
-                    value="{{category}}"
-                />
+                <input type="text" id="Title" name="title" class="form-control" required/>
             </div>
-            <button class="btn btn-success" id="btn">Crear Producto</button>
+
+            <div>
+                <label for="price" class="form-label">Precio</label>
+                <input type="text" id="Price" name="price" class="form-control" required/>
+            </div>
+
+        
+            <button id="btn" type="submit">Crear Producto</button>
+
         </form>
+
+    </div>
+
+    <div class="container">
+                <label for="price" class="form-label">ID de Producto a eliminar</label>
+                <input type="text" id="Delete" name="delete" class="form-control" required/>
+                <button id="btn-eliminar" type="submit">Eliminar Producto</button>
     </div>
     
 {{/body}}

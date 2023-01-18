@@ -6,8 +6,8 @@ h1{
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 15px;
+    margin-left: 15px;
 }
 
 .container {
@@ -25,6 +25,6 @@ input {
 label {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 15px;
+    margin-left: 15px;
 }
