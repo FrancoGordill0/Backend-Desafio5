@@ -6,11 +6,11 @@ const btnDelete = document.getElementById("btn-eliminar");
 const inputTitle = document.getElementById("Title");
 const inputPrice = document.getElementById("Price");
 
-const inputDelete = document.getElementById("")
+const inputDelete = document.getElementById("id")
 
 
 btn.addEventListener('click', (evt) => {
-            
+	
 	const title = inputTitle.value;
 	const price = inputPrice.value;
 	
@@ -21,6 +21,7 @@ btn.addEventListener('click', (evt) => {
 			"price": price
 		})
 	}
+
 })
 
 btnDelete.addEventListener('click', ()=> {
@@ -32,6 +33,7 @@ btnDelete.addEventListener('click', ()=> {
 			"id": id
 		})
 	}
+
 })
 
 

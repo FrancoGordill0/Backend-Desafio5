@@ -6,7 +6,7 @@ import viewsRouter from "./routes/views.router.js";
 import productRouter from "./routes/product.router.js";
 import cartRouter from "./routes/cart.router.js";
 import path from "path";
-
+import methodOverride from 'method-override';
 
       //Initializations
 const app = express();
@@ -23,8 +23,10 @@ app.set("view engine", "handlebars");
 app.set("views", "./src/views");
 
 
-app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(methodOverride('_method')); //para leer informacion de formulario por put y delete
+app.use(express.static("public"));
 app.use("/", viewsRouter);
 app.use("/api/products", productRouter);
 app.use("/api/carts", cartRouter);

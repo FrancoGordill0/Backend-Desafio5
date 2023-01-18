@@ -45,8 +45,8 @@ class ProductFileManager extends FileManager {
     try {
       const products = await this.getAll();
 
-      const index = products.findIndex((product) => product.id === productId);
-      if (index === -1) {
+      const index = products.findIndex((product) => product.id == productId);
+      if (index == -1) {
         throw new Error("Producto no encontrado");
       }
 
@@ -62,8 +62,8 @@ class ProductFileManager extends FileManager {
     try {
       const products = await this.getAll();
 
-      const index = products.findIndex((product) => product.id === productId);
-      if (index === -1) {
+      const index = products.findIndex((product) => product.id == productId);
+      if (index == -1) {
         throw new Error("Producto no encontrado");
       }
 

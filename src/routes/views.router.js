@@ -30,15 +30,15 @@ router.get('/realtimeproducts', async (req,res)=>{
    });
 
 router.post("/realtimeproducts", async (req, res) => {
-	const {body} = req;
-	await productFileManager.add(body);
+	const newProduct = req.body;
+	await productFileManager.add(newProduct);
 	res.redirect("/realtimeproducts");
   });
 
-/* router.delete("/realtimeproducts", async (req, res) => {
-	const {body} = req;
-	await productFileManager.delete(body);
-	res.redirect("/realtimeproducts");
-  }); */
+  router.delete("/realtimeproducts", async (req, res) => {
+	const id = req.body.id;
+	await productFileManager.delete(id);
+	res.redirect("/realtimeproducts"); 
+  });
 
 export default router;

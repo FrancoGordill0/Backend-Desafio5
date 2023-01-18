@@ -10,7 +10,7 @@
 
     <div class="container">
 
-        <form action="" method="POST">
+        <form action="/realtimeproducts" method="POST">
 
             <div>
                 <label for="title" class="form-label">Nombre</label>
@@ -29,10 +29,12 @@
 
     </div>
 
-    <div class="container">
-                <label for="price" class="form-label">ID de Producto a eliminar</label>
-                <input type="text" id="Delete" name="delete" class="form-control" required/>
-                <button id="btn-eliminar" type="submit">Eliminar Producto</button>
-    </div>
-    
+    <form action="/realtimeproducts?_method=DELETE" method="POST" >
+        <div class="container">
+            <label for="id" class="form-label">ID de Producto a eliminar</label>
+            <input type="text" id="id" name="id" class="form-control" required/>
+            <button id="btn-eliminar" type="submit">Eliminar Producto</button>
+        </div>
+</form>
+
 {{/body}}
